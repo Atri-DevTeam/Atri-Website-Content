@@ -3,12 +3,16 @@ name: Generate Passage Status
 on:
   push:
     branches:
-      - main  # 如果你的主分支叫 master，请改成 master
+      - main
     paths:
-      - '**/*.md' # 只有当 Markdown 文件发生变化时才触发，节省资源
+      - '**/*.md'
+
+concurrency:
+  group: generate-status-${{ github.ref }}
+  cancel-in-progress: true
 
 permissions:
-  contents: write # 允许 Action 将生成的 json 重新 commit 回仓库
+  contents: write
 
 jobs:
   generate-json:
@@ -17,8 +21,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          # 【关键】必须拉取所有的 git 历史记录，否则无法获取文件过去的提交者和时间
-          fetch-depth: 0 
+          fetch-depth: 0 # 必须拉取完整历史记录才能获取所有的 commit
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -36,22 +39,40 @@ jobs:
               # 忽略掉 .git 和 .github 目录
               if ".git" in root or ".github" in root:
                   continue
-              
+          
               for file in files:
                   if file.endswith(".md"):
                       filepath = os.path.join(root, file)
-                      # 使用 git log 获取该文件最后一次 commit 的作者名(%aN)和ISO格式时间(%aI)
-                      cmd = ["git", "log", "-1", "--format=%aN|%aI", filepath]
+                      # 修改点：不再只取 -1 条，而是取这个文件的所有历史记录
+                      # 格式化输出: %h(短哈希)|%aN(作者)|%aI(ISO时间)|%s(提交信息)
+                      cmd = ["git", "log", "--format=%h|%aN|%aI|%s", filepath]
                       try:
                           output = subprocess.check_output(cmd).decode("utf-8").strip()
                           if output:
-                              author, date = output.split("|", 1)
-                              # 去掉路径前面的 "./" 方便前端解析
-                              clean_path = filepath.lstrip("./")
-                              result[clean_path] = {
-                                  "author": author,
-                                  "last_edited": date
-                              }
+                              lines = output.split("\n")
+                              history_list = []
+          
+                              for line in lines:
+                                  # 按 | 分割，最多分割3次（防止提交信息中含有 | 字符导致解析报错）
+                                  parts = line.split("|", 3)
+                                  if len(parts) == 4:
+                                      history_list.append({
+                                          "hash": parts[0],
+                                          "author": parts[1],
+                                          "date": parts[2],
+                                          "message": parts[3]
+                                      })
+          
+                              if history_list:
+                                  # 取第一条作为最后编辑状态（因为 git log 默认按时间倒序排，第一条就是最新的）
+                                  latest = history_list[0]
+                                  clean_path = filepath.lstrip("./")
+          
+                                  result[clean_path] = {
+                                      "author": latest["author"],
+                                      "last_edited": latest["date"],
+                                      "history": history_list  # 把完整历史记录存进数组
+                                  }
                       except Exception as e:
                           print(f"Error processing {filepath}: {e}")
 
@@ -63,6 +84,5 @@ jobs:
       - name: Commit and Push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: auto-update passage_status.json [skip ci]"
+          commit_message: "chore: auto-update passage_status.json with history [skip ci]"
           file_pattern: passage_status.json
-          # [skip ci] 非常关键，防止这个 commit 再次触发 Actions 导致无限死循环
