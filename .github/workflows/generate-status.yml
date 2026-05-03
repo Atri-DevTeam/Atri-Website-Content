@@ -1,0 +1,68 @@
+name: Generate Passage Status
+
+on:
+  push:
+    branches:
+      - main  # 如果你的主分支叫 master，请改成 master
+    paths:
+      - '**/*.md' # 只有当 Markdown 文件发生变化时才触发，节省资源
+
+permissions:
+  contents: write # 允许 Action 将生成的 json 重新 commit 回仓库
+
+jobs:
+  generate-json:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          # 【关键】必须拉取所有的 git 历史记录，否则无法获取文件过去的提交者和时间
+          fetch-depth: 0 
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Generate passage_status.json
+        run: |
+          python -c '
+          import os, json, subprocess
+
+          result = {}
+          # 遍历当前目录
+          for root, dirs, files in os.walk("."):
+              # 忽略掉 .git 和 .github 目录
+              if ".git" in root or ".github" in root:
+                  continue
+              
+              for file in files:
+                  if file.endswith(".md"):
+                      filepath = os.path.join(root, file)
+                      # 使用 git log 获取该文件最后一次 commit 的作者名(%aN)和ISO格式时间(%aI)
+                      cmd = ["git", "log", "-1", "--format=%aN|%aI", filepath]
+                      try:
+                          output = subprocess.check_output(cmd).decode("utf-8").strip()
+                          if output:
+                              author, date = output.split("|", 1)
+                              # 去掉路径前面的 "./" 方便前端解析
+                              clean_path = filepath.lstrip("./")
+                              result[clean_path] = {
+                                  "author": author,
+                                  "last_edited": date
+                              }
+                      except Exception as e:
+                          print(f"Error processing {filepath}: {e}")
+
+          # 写入 JSON 文件
+          with open("passage_status.json", "w", encoding="utf-8") as f:
+              json.dump(result, f, ensure_ascii=False, indent=2)
+          '
+
+      - name: Commit and Push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: auto-update passage_status.json [skip ci]"
+          file_pattern: passage_status.json
+          # [skip ci] 非常关键，防止这个 commit 再次触发 Actions 导致无限死循环
