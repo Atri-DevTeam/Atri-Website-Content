@@ -55,8 +55,14 @@
   },
   "Minecraft/Hypixel-Punishments.md": {
     "author": "YZ_Ljc_",
-    "last_edited": "2026-05-04T21:56:28+08:00",
+    "last_edited": "2026-05-05T06:51:22+08:00",
     "history": [
+      {
+        "hash": "e051c86",
+        "author": "YZ_Ljc_",
+        "date": "2026-05-05T06:51:22+08:00",
+        "message": "feat: 修改部分内容和排版"
+      },
       {
         "hash": "15c2eae",
         "author": "YZ_Ljc_",
