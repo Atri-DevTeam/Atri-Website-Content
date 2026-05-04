@@ -11,6 +11,24 @@
       }
     ]
   },
+  "其余内容/页面编辑说明.md": {
+    "author": "YZ_Ljc_",
+    "last_edited": "2026-05-04T15:16:59+08:00",
+    "history": [
+      {
+        "hash": "1f12a01",
+        "author": "YZ_Ljc_",
+        "date": "2026-05-04T15:16:59+08:00",
+        "message": "feat: Page Edit Information"
+      },
+      {
+        "hash": "87f1785",
+        "author": "YZ_Ljc_",
+        "date": "2026-05-04T15:16:45+08:00",
+        "message": "feat: Custom Block Render and Info Doc"
+      }
+    ]
+  },
   "制作人员/YZ_Ljc_.md": {
     "author": "YZ_Ljc_",
     "last_edited": "2026-05-04T14:20:05+08:00",
