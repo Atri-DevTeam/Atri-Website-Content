@@ -55,8 +55,14 @@
   },
   "Minecraft/Hypixel-Punishments.md": {
     "author": "YZ_Ljc_",
-    "last_edited": "2026-05-05T06:51:22+08:00",
+    "last_edited": "2026-05-05T20:41:40+08:00",
     "history": [
+      {
+        "hash": "08d4352",
+        "author": "YZ_Ljc_",
+        "date": "2026-05-05T20:41:40+08:00",
+        "message": "feat: 修改Hypixel全封禁类型解析内容，补充新内容"
+      },
       {
         "hash": "e051c86",
         "author": "YZ_Ljc_",
