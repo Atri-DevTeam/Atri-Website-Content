@@ -85,8 +85,14 @@
   },
   "亚托莉喵/介绍.md": {
     "author": "github-actions[bot]",
-    "last_edited": "2026-10-05T15:13:10Z",
+    "last_edited": "2026-10-05T15:19:49Z",
     "history": [
+      {
+        "hash": "6a3cf75",
+        "author": "github-actions[bot]",
+        "date": "2026-10-05T15:19:49Z",
+        "message": "docs: 同步亚托莉喵文档"
+      },
       {
         "hash": "1e8cbf1",
         "author": "github-actions[bot]",
@@ -97,8 +103,14 @@
   },
   "亚托莉喵/功能索引.md": {
     "author": "github-actions[bot]",
-    "last_edited": "2026-10-05T15:13:10Z",
+    "last_edited": "2026-10-05T15:19:49Z",
     "history": [
+      {
+        "hash": "6a3cf75",
+        "author": "github-actions[bot]",
+        "date": "2026-10-05T15:19:49Z",
+        "message": "docs: 同步亚托莉喵文档"
+      },
       {
         "hash": "1e8cbf1",
         "author": "github-actions[bot]",
@@ -109,8 +121,14 @@
   },
   "亚托莉喵/文档目录.md": {
     "author": "github-actions[bot]",
-    "last_edited": "2026-10-05T15:13:10Z",
+    "last_edited": "2026-10-05T15:19:49Z",
     "history": [
+      {
+        "hash": "6a3cf75",
+        "author": "github-actions[bot]",
+        "date": "2026-10-05T15:19:49Z",
+        "message": "docs: 同步亚托莉喵文档"
+      },
       {
         "hash": "1e8cbf1",
         "author": "github-actions[bot]",
@@ -121,8 +139,14 @@
   },
   "亚托莉喵/部署与开发/部署.md": {
     "author": "github-actions[bot]",
-    "last_edited": "2026-10-05T15:13:10Z",
+    "last_edited": "2026-10-05T15:19:49Z",
     "history": [
+      {
+        "hash": "6a3cf75",
+        "author": "github-actions[bot]",
+        "date": "2026-10-05T15:19:49Z",
+        "message": "docs: 同步亚托莉喵文档"
+      },
       {
         "hash": "1e8cbf1",
         "author": "github-actions[bot]",
@@ -133,8 +157,14 @@
   },
   "亚托莉喵/部署与开发/开发与构建.md": {
     "author": "github-actions[bot]",
-    "last_edited": "2026-10-05T15:13:10Z",
+    "last_edited": "2026-10-05T15:19:49Z",
     "history": [
+      {
+        "hash": "6a3cf75",
+        "author": "github-actions[bot]",
+        "date": "2026-10-05T15:19:49Z",
+        "message": "docs: 同步亚托莉喵文档"
+      },
       {
         "hash": "1e8cbf1",
         "author": "github-actions[bot]",
@@ -145,8 +175,14 @@
   },
   "亚托莉喵/部署与开发/配置.md": {
     "author": "github-actions[bot]",
-    "last_edited": "2026-10-05T15:13:10Z",
+    "last_edited": "2026-10-05T15:19:49Z",
     "history": [
+      {
+        "hash": "6a3cf75",
+        "author": "github-actions[bot]",
+        "date": "2026-10-05T15:19:49Z",
+        "message": "docs: 同步亚托莉喵文档"
+      },
       {
         "hash": "1e8cbf1",
         "author": "github-actions[bot]",
@@ -157,32 +193,44 @@
   },
   "亚托莉喵/接入与应用/图片与业务接口.md": {
     "author": "github-actions[bot]",
-    "last_edited": "2026-10-05T15:13:10Z",
+    "last_edited": "2026-10-05T15:19:49Z",
     "history": [
+      {
+        "hash": "6a3cf75",
+        "author": "github-actions[bot]",
+        "date": "2026-10-05T15:19:49Z",
+        "message": "docs: 同步亚托莉喵文档"
+      },
       {
         "hash": "1e8cbf1",
         "author": "github-actions[bot]",
         "date": "2026-10-05T15:13:10Z",
+        "message": "docs: 同步亚托莉喵文档"
+      }
+    ]
+  },
+  "亚托莉喵/接入与应用/QQ频道第二账号.md": {
+    "author": "github-actions[bot]",
+    "last_edited": "2026-10-05T15:19:49Z",
+    "history": [
+      {
+        "hash": "6a3cf75",
+        "author": "github-actions[bot]",
+        "date": "2026-10-05T15:19:49Z",
         "message": "docs: 同步亚托莉喵文档"
       }
     ]
   },
   "亚托莉喵/接入与应用/AI与文本审查.md": {
     "author": "github-actions[bot]",
-    "last_edited": "2026-10-05T15:13:10Z",
+    "last_edited": "2026-10-05T15:19:49Z",
     "history": [
       {
-        "hash": "1e8cbf1",
+        "hash": "6a3cf75",
         "author": "github-actions[bot]",
-        "date": "2026-10-05T15:13:10Z",
+        "date": "2026-10-05T15:19:49Z",
         "message": "docs: 同步亚托莉喵文档"
-      }
-    ]
-  },
-  "亚托莉喵/接入与应用/腾讯频道第二账号.md": {
-    "author": "github-actions[bot]",
-    "last_edited": "2026-10-05T15:13:10Z",
-    "history": [
+      },
       {
         "hash": "1e8cbf1",
         "author": "github-actions[bot]",
@@ -193,8 +241,14 @@
   },
   "亚托莉喵/接入与应用/管理页面.md": {
     "author": "github-actions[bot]",
-    "last_edited": "2026-10-05T15:13:10Z",
+    "last_edited": "2026-10-05T15:19:49Z",
     "history": [
+      {
+        "hash": "6a3cf75",
+        "author": "github-actions[bot]",
+        "date": "2026-10-05T15:19:49Z",
+        "message": "docs: 同步亚托莉喵文档"
+      },
       {
         "hash": "1e8cbf1",
         "author": "github-actions[bot]",
@@ -205,8 +259,14 @@
   },
   "亚托莉喵/框架/平台与消息.md": {
     "author": "github-actions[bot]",
-    "last_edited": "2026-10-05T15:13:10Z",
+    "last_edited": "2026-10-05T15:19:49Z",
     "history": [
+      {
+        "hash": "6a3cf75",
+        "author": "github-actions[bot]",
+        "date": "2026-10-05T15:19:49Z",
+        "message": "docs: 同步亚托莉喵文档"
+      },
       {
         "hash": "1e8cbf1",
         "author": "github-actions[bot]",
@@ -217,8 +277,14 @@
   },
   "亚托莉喵/框架/账号与权限.md": {
     "author": "github-actions[bot]",
-    "last_edited": "2026-10-05T15:13:10Z",
+    "last_edited": "2026-10-05T15:19:49Z",
     "history": [
+      {
+        "hash": "6a3cf75",
+        "author": "github-actions[bot]",
+        "date": "2026-10-05T15:19:49Z",
+        "message": "docs: 同步亚托莉喵文档"
+      },
       {
         "hash": "1e8cbf1",
         "author": "github-actions[bot]",
@@ -229,8 +295,14 @@
   },
   "亚托莉喵/框架/架构与生命周期.md": {
     "author": "github-actions[bot]",
-    "last_edited": "2026-10-05T15:13:10Z",
+    "last_edited": "2026-10-05T15:19:49Z",
     "history": [
+      {
+        "hash": "6a3cf75",
+        "author": "github-actions[bot]",
+        "date": "2026-10-05T15:19:49Z",
+        "message": "docs: 同步亚托莉喵文档"
+      },
       {
         "hash": "1e8cbf1",
         "author": "github-actions[bot]",
@@ -241,8 +313,14 @@
   },
   "亚托莉喵/框架/运行时服务.md": {
     "author": "github-actions[bot]",
-    "last_edited": "2026-10-05T15:13:10Z",
+    "last_edited": "2026-10-05T15:19:49Z",
     "history": [
+      {
+        "hash": "6a3cf75",
+        "author": "github-actions[bot]",
+        "date": "2026-10-05T15:19:49Z",
+        "message": "docs: 同步亚托莉喵文档"
+      },
       {
         "hash": "1e8cbf1",
         "author": "github-actions[bot]",
@@ -253,8 +331,14 @@
   },
   "亚托莉喵/框架/指令.md": {
     "author": "github-actions[bot]",
-    "last_edited": "2026-10-05T15:13:10Z",
+    "last_edited": "2026-10-05T15:19:49Z",
     "history": [
+      {
+        "hash": "6a3cf75",
+        "author": "github-actions[bot]",
+        "date": "2026-10-05T15:19:49Z",
+        "message": "docs: 同步亚托莉喵文档"
+      },
       {
         "hash": "1e8cbf1",
         "author": "github-actions[bot]",
@@ -265,8 +349,14 @@
   },
   "亚托莉喵/框架/事件.md": {
     "author": "github-actions[bot]",
-    "last_edited": "2026-10-05T15:13:10Z",
+    "last_edited": "2026-10-05T15:19:49Z",
     "history": [
+      {
+        "hash": "6a3cf75",
+        "author": "github-actions[bot]",
+        "date": "2026-10-05T15:19:49Z",
+        "message": "docs: 同步亚托莉喵文档"
+      },
       {
         "hash": "1e8cbf1",
         "author": "github-actions[bot]",
@@ -277,8 +367,14 @@
   },
   "亚托莉喵/框架/插件开发.md": {
     "author": "github-actions[bot]",
-    "last_edited": "2026-10-05T15:13:10Z",
+    "last_edited": "2026-10-05T15:19:49Z",
     "history": [
+      {
+        "hash": "6a3cf75",
+        "author": "github-actions[bot]",
+        "date": "2026-10-05T15:19:49Z",
+        "message": "docs: 同步亚托莉喵文档"
+      },
       {
         "hash": "1e8cbf1",
         "author": "github-actions[bot]",
