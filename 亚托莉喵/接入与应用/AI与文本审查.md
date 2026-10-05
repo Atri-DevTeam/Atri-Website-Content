@@ -17,7 +17,7 @@ ai:
 
 `base-url` 填完整请求地址，`timeout` 单位为毫秒。除 `api-key`、`base-url`、`model`、`timeout` 外的配置项作为额外请求字段保存
 
-[AiService](https://github.com/Atri-DevTeam/AtriBot/blob/17b8384bc8704c8c27b6310ff40ab31057ee3b1f/src/main/java/top/yzljc/atribot/service/ai/AiService.java) 按 Chat Completions 格式提交 `messages`，读取 `choices[0].message.content`
+[AiService](https://github.com/Atri-DevTeam/AtriBot/blob/41320224c245de463ff7f45ac963e777152df379/src/main/java/top/yzljc/atribot/service/ai/AiService.java) 按 Chat Completions 格式提交 `messages`，读取 `choices[0].message.content`
 
 ```java
 AiService ai = new AiService(
@@ -33,11 +33,11 @@ String answer = ai.askWithSystemPrompt(
 
 指定提供方未配置时回退 `DEFAULT`。普通 `ask(...)` 使用内置系统提示词；服务失败返回预定义提示文本，调用方可用 `AiService.isValidResponse(...)` 识别
 
-配置与实现入口：[Config](https://github.com/Atri-DevTeam/AtriBot/blob/17b8384bc8704c8c27b6310ff40ab31057ee3b1f/src/main/java/top/yzljc/atribot/configuration/Config.java)、[AiProperties](https://github.com/Atri-DevTeam/AtriBot/blob/17b8384bc8704c8c27b6310ff40ab31057ee3b1f/src/main/java/top/yzljc/atribot/service/ai/AiProperties.java)、[AiProvider](https://github.com/Atri-DevTeam/AtriBot/blob/17b8384bc8704c8c27b6310ff40ab31057ee3b1f/src/main/java/top/yzljc/atribot/service/ai/AiProvider.java)
+配置与实现入口：[Config](https://github.com/Atri-DevTeam/AtriBot/blob/41320224c245de463ff7f45ac963e777152df379/src/main/java/top/yzljc/atribot/configuration/Config.java)、[AiProperties](https://github.com/Atri-DevTeam/AtriBot/blob/41320224c245de463ff7f45ac963e777152df379/src/main/java/top/yzljc/atribot/service/ai/AiProperties.java)、[AiProvider](https://github.com/Atri-DevTeam/AtriBot/blob/41320224c245de463ff7f45ac963e777152df379/src/main/java/top/yzljc/atribot/service/ai/AiProvider.java)
 
 ## 文本审查服务
 
-[TextReviewService](https://github.com/Atri-DevTeam/AtriBot/blob/17b8384bc8704c8c27b6310ff40ab31057ee3b1f/src/main/java/top/yzljc/atribot/service/textreview/TextReviewService.java) 是按需调用的文本处理服务，结合本地词库、链接规则和 AI 结果生成替换文本
+[TextReviewService](https://github.com/Atri-DevTeam/AtriBot/blob/41320224c245de463ff7f45ac963e777152df379/src/main/java/top/yzljc/atribot/service/textreview/TextReviewService.java) 是按需调用的文本处理服务，结合本地词库、链接规则和 AI 结果生成替换文本
 
 ```java
 String reviewed = TextReviewService.review(

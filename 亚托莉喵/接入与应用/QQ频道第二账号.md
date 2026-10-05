@@ -1,8 +1,8 @@
-# 腾讯频道第二账号
+# QQ 频道第二账号
 
 [文档目录](../%E6%96%87%E6%A1%A3%E7%9B%AE%E5%BD%95.md) · [WebUI 与 Miniapp](%E7%AE%A1%E7%90%86%E9%A1%B5%E9%9D%A2.md)
 
-该模块通过 `tencent-channel-cli` 操作第二账号，封装位于 [sakuraba_ema](https://github.com/Atri-DevTeam/AtriBot/tree/17b8384bc8704c8c27b6310ff40ab31057ee3b1f/src/main/java/top/yzljc/sakuraba_ema)。它与 QQ 官方机器人频道适配器使用不同连接和账号
+该模块通过 `tencent-channel-cli` 操作第二账号，封装位于 [sakuraba_ema](https://github.com/Atri-DevTeam/AtriBot/tree/41320224c245de463ff7f45ac963e777152df379/src/main/java/top/yzljc/sakuraba_ema)。它与 QQ 官方机器人频道适配器使用不同连接和账号
 
 ## 配置
 
@@ -43,7 +43,7 @@ if (result.success()) {
 
 `ChannelCliResult` 保留成功状态、退出码、JSON 响应、标准输出、标准错误和调用信息。通过 `getData()`、`getError()` 读取业务结果，并可检查限流或认证过期
 
-[ChannelCliClient](https://github.com/Atri-DevTeam/AtriBot/blob/17b8384bc8704c8c27b6310ff40ab31057ee3b1f/src/main/java/top/yzljc/sakuraba_ema/ChannelCliClient.java) 统一管理进程执行与参数传递。新增业务调用优先扩展对应封装，避免业务层自行拼接 shell 命令
+[ChannelCliClient](https://github.com/Atri-DevTeam/AtriBot/blob/41320224c245de463ff7f45ac963e777152df379/src/main/java/top/yzljc/sakuraba_ema/ChannelCliClient.java) 统一管理进程执行与参数传递。新增业务调用优先扩展对应封装，避免业务层自行拼接 shell 命令
 
 ## 管理指令
 
@@ -74,4 +74,4 @@ if (result.success()) {
 
 未启用或未配置返回 `503`，限流返回 `429`，超时返回 `504`，CLI 业务失败返回 `502`。CLI 登录过期与 WebUI 登录会话分别处理
 
-接口实现见 [ChannelController](https://github.com/Atri-DevTeam/AtriBot/blob/17b8384bc8704c8c27b6310ff40ab31057ee3b1f/src/main/java/top/yzljc/atribot/webui/controller/ChannelController.java)
+接口实现见 [ChannelController](https://github.com/Atri-DevTeam/AtriBot/blob/41320224c245de463ff7f45ac963e777152df379/src/main/java/top/yzljc/atribot/webui/controller/ChannelController.java)
