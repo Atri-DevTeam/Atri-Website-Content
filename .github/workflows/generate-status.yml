@@ -1,3 +1,5 @@
+# Replace the existing document workflow with this file
+# Required secrets: DOCS_PUBLISH_URL and DOCS_PUBLISH_TOKEN
 name: Generate and Publish Documents
 
 on:
@@ -16,7 +18,7 @@ jobs:
   publish:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 60
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -34,11 +36,9 @@ jobs:
           DOCS_PUBLISH_TOKEN: ${{ secrets.DOCS_PUBLISH_TOKEN }}
         run: |
           python - <<'PY'
-          import base64, json, os, subprocess
+          import http.client, json, os, subprocess, tempfile, zipfile
           from pathlib import Path
           from urllib.parse import urlsplit
-          from urllib.request import Request, build_opener, HTTPRedirectHandler
-          from urllib.error import HTTPError, URLError
 
           url = os.environ.get("DOCS_PUBLISH_URL", "").strip()
           token = os.environ.get("DOCS_PUBLISH_TOKEN", "")
@@ -53,10 +53,8 @@ jobs:
 
           catalog, documents, assets = {}, {}, {}
           image_types = {".png", ".jpg", ".jpeg", ".gif", ".webp", ".avif", ".svg"}
-          max_bytes = 32 * 1024 * 1024
-          source_bytes = 0
           for name in git("ls-files", "-z").split("\0"):
-              if not name or any(p.startswith(".") or p in {"node_modules", "dist"} for p in name.split("/")):
+              if not name or any(p.lower() in {".git", ".github", ".svn", ".hg", ".ssh", ".aws", ".codex", ".agents", "node_modules", "dist"} or p.lower() == ".env" or p.lower().startswith(".env.") for p in name.split("/")):
                   continue
               path = Path(name)
               suffix = path.suffix.lower()
@@ -64,13 +62,10 @@ jobs:
                   continue
               if any(p.is_symlink() for p in [path, *path.parents]):
                   raise SystemExit(f"不支持符号链接：{name}")
-              source_bytes += path.stat().st_size
-              if source_bytes > max_bytes or len(documents) + len(assets) >= 10000:
-                  raise SystemExit("文档和图片超过 32 MiB 或 10000 个文件限制")
               if suffix in image_types:
-                  assets[name] = base64.b64encode(path.read_bytes()).decode("ascii")
+                  assets[name] = path
                   continue
-              documents[name] = path.read_text(encoding="utf-8")
+              documents[name] = path
               history = []
               for line in git("log", "--format=%h%x00%aN%x00%aI%x00%s", "--", name).splitlines():
                   parts = line.split("\0", 3)
@@ -89,24 +84,35 @@ jobs:
           Path("passage_status.json").write_text(
               json.dumps(catalog, ensure_ascii=False, indent=2), encoding="utf-8")
           revision = git("rev-parse", "HEAD").strip()
-          body = json.dumps({"revision": revision, "catalog": catalog,
-                             "files": documents, "assets": assets}, ensure_ascii=False).encode("utf-8")
-          if len(body) > max_bytes:
-              raise SystemExit("发布包超过 32 MiB，请缩减图片或文档体积")
-
-          class NoRedirect(HTTPRedirectHandler):
-              def redirect_request(self, req, fp, code, msg, headers, newurl):
-                  return None
-
-          request = Request(url, data=body, method="POST", headers={
-              "Authorization": "Bearer " + token, "Content-Type": "application/json"})
-          try:
-              with build_opener(NoRedirect()).open(request, timeout=120) as response:
-                  result = json.load(response)
-          except HTTPError as error:
-              raise SystemExit(f"发布失败，HTTP {error.code}，请检查后端接口及配置")
-          except (URLError, TimeoutError):
-              raise SystemExit("无法连接发布接口，或请求超时")
+          # Build on disk and stream the ZIP over HTTPS; no fixed workflow size cap.
+          with tempfile.TemporaryFile() as archive:
+              with zipfile.ZipFile(archive, "w", compression=zipfile.ZIP_DEFLATED, allowZip64=True) as output:
+                  output.writestr(".docs-manifest.json", json.dumps({"revision": revision}))
+                  output.write("passage_status.json", "passage_status.json")
+                  for name, path in {**documents, **assets}.items():
+                      output.write(path, name)
+              length = archive.tell()
+              archive.seek(0)
+              connection = http.client.HTTPSConnection(address.hostname, address.port or 443, timeout=300)
+              try:
+                  target = address.path or "/"
+                  if address.query:
+                      target += "?" + address.query
+                  connection.putrequest("POST", target)
+                  connection.putheader("Authorization", "Bearer " + token)
+                  connection.putheader("Content-Type", "application/zip")
+                  connection.putheader("Content-Length", str(length))
+                  connection.endheaders()
+                  while chunk := archive.read(1024 * 1024):
+                      connection.send(chunk)
+                  response = connection.getresponse()
+                  if response.status != 200:
+                      raise SystemExit(f"发布失败，HTTP {response.status}，请检查后端和反向代理配置")
+                  result = json.loads(response.read(65536))
+              except (OSError, http.client.HTTPException):
+                  raise SystemExit("上传中断或接口连接失败，请检查网络后重试")
+              finally:
+                  connection.close()
           if result.get("status") != 200:
               raise SystemExit("后端未返回发布成功状态")
           print(f"发布成功：{len(documents)} 篇文档，{len(assets)} 张图片，版本 {revision}")
