@@ -1,5 +1,3 @@
-# Replace the existing document workflow with this file
-# Required secrets: DOCS_PUBLISH_URL and DOCS_PUBLISH_TOKEN
 name: Generate and Publish Documents
 
 on:
