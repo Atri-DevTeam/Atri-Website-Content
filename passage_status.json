@@ -1,34 +1,4 @@
 {
-  "README.md": {
-    "author": "YZ_Ljc_",
-    "last_edited": "2026-05-04T01:01:41+08:00",
-    "history": [
-      {
-        "hash": "f59cc2a",
-        "author": "YZ_Ljc_",
-        "date": "2026-05-04T01:01:41+08:00",
-        "message": "feat: Basic Contents"
-      }
-    ]
-  },
-  "其余内容/页面编辑说明.md": {
-    "author": "YZ_Ljc_",
-    "last_edited": "2026-05-04T15:16:59+08:00",
-    "history": [
-      {
-        "hash": "1f12a01",
-        "author": "YZ_Ljc_",
-        "date": "2026-05-04T15:16:59+08:00",
-        "message": "feat: Page Edit Information"
-      },
-      {
-        "hash": "87f1785",
-        "author": "YZ_Ljc_",
-        "date": "2026-05-04T15:16:45+08:00",
-        "message": "feat: Custom Block Render and Info Doc"
-      }
-    ]
-  },
   "Minecraft/Hypixel-Punishments.md": {
     "author": "YZ_Ljc_",
     "last_edited": "2026-05-05T20:41:40+08:00",
@@ -71,15 +41,459 @@
       }
     ]
   },
-  "制作人员/YZ_Ljc_.md": {
+  "README.md": {
     "author": "YZ_Ljc_",
-    "last_edited": "2026-05-04T14:20:05+08:00",
+    "last_edited": "2026-05-04T01:01:41+08:00",
     "history": [
       {
-        "hash": "ed19cfc",
+        "hash": "f59cc2a",
         "author": "YZ_Ljc_",
-        "date": "2026-05-04T14:20:05+08:00",
-        "message": "feat: Author Information"
+        "date": "2026-05-04T01:01:41+08:00",
+        "message": "feat: Basic Contents"
+      }
+    ]
+  },
+  "亚托莉喵/Napcat/HTTP调用.md": {
+    "author": "github-actions[bot]",
+    "last_edited": "2026-10-15T14:47:16Z",
+    "history": [
+      {
+        "hash": "464224b",
+        "author": "github-actions[bot]",
+        "date": "2026-10-15T14:47:16Z",
+        "message": "docs: 同步 atri-core 文档"
+      }
+    ]
+  },
+  "亚托莉喵/Napcat/合并转发.md": {
+    "author": "github-actions[bot]",
+    "last_edited": "2026-10-15T14:47:16Z",
+    "history": [
+      {
+        "hash": "464224b",
+        "author": "github-actions[bot]",
+        "date": "2026-10-15T14:47:16Z",
+        "message": "docs: 同步 atri-core 文档"
+      }
+    ]
+  },
+  "亚托莉喵/Napcat/消息.md": {
+    "author": "github-actions[bot]",
+    "last_edited": "2026-10-15T14:47:16Z",
+    "history": [
+      {
+        "hash": "464224b",
+        "author": "github-actions[bot]",
+        "date": "2026-10-15T14:47:16Z",
+        "message": "docs: 同步 atri-core 文档"
+      }
+    ]
+  },
+  "亚托莉喵/Napcat/消息段.md": {
+    "author": "github-actions[bot]",
+    "last_edited": "2026-10-15T14:47:16Z",
+    "history": [
+      {
+        "hash": "464224b",
+        "author": "github-actions[bot]",
+        "date": "2026-10-15T14:47:16Z",
+        "message": "docs: 同步 atri-core 文档"
+      }
+    ]
+  },
+  "亚托莉喵/Napcat/用户与好友.md": {
+    "author": "github-actions[bot]",
+    "last_edited": "2026-10-15T14:47:16Z",
+    "history": [
+      {
+        "hash": "464224b",
+        "author": "github-actions[bot]",
+        "date": "2026-10-15T14:47:16Z",
+        "message": "docs: 同步 atri-core 文档"
+      }
+    ]
+  },
+  "亚托莉喵/Napcat/目录.md": {
+    "author": "github-actions[bot]",
+    "last_edited": "2026-10-15T14:47:16Z",
+    "history": [
+      {
+        "hash": "464224b",
+        "author": "github-actions[bot]",
+        "date": "2026-10-15T14:47:16Z",
+        "message": "docs: 同步 atri-core 文档"
+      }
+    ]
+  },
+  "亚托莉喵/Napcat/群操作.md": {
+    "author": "github-actions[bot]",
+    "last_edited": "2026-10-15T14:47:16Z",
+    "history": [
+      {
+        "hash": "464224b",
+        "author": "github-actions[bot]",
+        "date": "2026-10-15T14:47:16Z",
+        "message": "docs: 同步 atri-core 文档"
+      }
+    ]
+  },
+  "亚托莉喵/QQ交互配置/指令面板.md": {
+    "author": "github-actions[bot]",
+    "last_edited": "2026-10-15T14:47:16Z",
+    "history": [
+      {
+        "hash": "464224b",
+        "author": "github-actions[bot]",
+        "date": "2026-10-15T14:47:16Z",
+        "message": "docs: 同步 atri-core 文档"
+      }
+    ]
+  },
+  "亚托莉喵/QQ交互配置/按钮交互.md": {
+    "author": "github-actions[bot]",
+    "last_edited": "2026-10-15T14:47:16Z",
+    "history": [
+      {
+        "hash": "464224b",
+        "author": "github-actions[bot]",
+        "date": "2026-10-15T14:47:16Z",
+        "message": "docs: 同步 atri-core 文档"
+      }
+    ]
+  },
+  "亚托莉喵/QQ交互配置/目录.md": {
+    "author": "github-actions[bot]",
+    "last_edited": "2026-10-15T14:47:16Z",
+    "history": [
+      {
+        "hash": "464224b",
+        "author": "github-actions[bot]",
+        "date": "2026-10-15T14:47:16Z",
+        "message": "docs: 同步 atri-core 文档"
+      }
+    ]
+  },
+  "亚托莉喵/QQ交互配置/自定义菜单.md": {
+    "author": "github-actions[bot]",
+    "last_edited": "2026-10-15T14:47:16Z",
+    "history": [
+      {
+        "hash": "464224b",
+        "author": "github-actions[bot]",
+        "date": "2026-10-15T14:47:16Z",
+        "message": "docs: 同步 atri-core 文档"
+      }
+    ]
+  },
+  "亚托莉喵/QQ官方机器人/机器人与群资料.md": {
+    "author": "github-actions[bot]",
+    "last_edited": "2026-10-15T14:47:16Z",
+    "history": [
+      {
+        "hash": "464224b",
+        "author": "github-actions[bot]",
+        "date": "2026-10-15T14:47:16Z",
+        "message": "docs: 同步 atri-core 文档"
+      }
+    ]
+  },
+  "亚托莉喵/QQ官方机器人/目录.md": {
+    "author": "github-actions[bot]",
+    "last_edited": "2026-10-15T14:47:16Z",
+    "history": [
+      {
+        "hash": "464224b",
+        "author": "github-actions[bot]",
+        "date": "2026-10-15T14:47:16Z",
+        "message": "docs: 同步 atri-core 文档"
+      }
+    ]
+  },
+  "亚托莉喵/QQ消息/图片与文件上传.md": {
+    "author": "github-actions[bot]",
+    "last_edited": "2026-10-15T14:47:16Z",
+    "history": [
+      {
+        "hash": "464224b",
+        "author": "github-actions[bot]",
+        "date": "2026-10-15T14:47:16Z",
+        "message": "docs: 同步 atri-core 文档"
+      }
+    ]
+  },
+  "亚托莉喵/QQ消息/备用图片上传.md": {
+    "author": "github-actions[bot]",
+    "last_edited": "2026-10-15T14:47:16Z",
+    "history": [
+      {
+        "hash": "464224b",
+        "author": "github-actions[bot]",
+        "date": "2026-10-15T14:47:16Z",
+        "message": "docs: 同步 atri-core 文档"
+      }
+    ]
+  },
+  "亚托莉喵/QQ消息/流式消息.md": {
+    "author": "github-actions[bot]",
+    "last_edited": "2026-10-15T14:47:16Z",
+    "history": [
+      {
+        "hash": "464224b",
+        "author": "github-actions[bot]",
+        "date": "2026-10-15T14:47:16Z",
+        "message": "docs: 同步 atri-core 文档"
+      }
+    ]
+  },
+  "亚托莉喵/QQ消息/目录.md": {
+    "author": "github-actions[bot]",
+    "last_edited": "2026-10-15T14:47:16Z",
+    "history": [
+      {
+        "hash": "464224b",
+        "author": "github-actions[bot]",
+        "date": "2026-10-15T14:47:16Z",
+        "message": "docs: 同步 atri-core 文档"
+      }
+    ]
+  },
+  "亚托莉喵/QQ消息/私聊消息.md": {
+    "author": "github-actions[bot]",
+    "last_edited": "2026-10-15T14:47:16Z",
+    "history": [
+      {
+        "hash": "464224b",
+        "author": "github-actions[bot]",
+        "date": "2026-10-15T14:47:16Z",
+        "message": "docs: 同步 atri-core 文档"
+      }
+    ]
+  },
+  "亚托莉喵/QQ消息/群消息.md": {
+    "author": "github-actions[bot]",
+    "last_edited": "2026-10-15T14:47:16Z",
+    "history": [
+      {
+        "hash": "464224b",
+        "author": "github-actions[bot]",
+        "date": "2026-10-15T14:47:16Z",
+        "message": "docs: 同步 atri-core 文档"
+      }
+    ]
+  },
+  "亚托莉喵/QQ消息/自定义消息请求.md": {
+    "author": "github-actions[bot]",
+    "last_edited": "2026-10-15T14:47:16Z",
+    "history": [
+      {
+        "hash": "464224b",
+        "author": "github-actions[bot]",
+        "date": "2026-10-15T14:47:16Z",
+        "message": "docs: 同步 atri-core 文档"
+      }
+    ]
+  },
+  "亚托莉喵/QQ消息/调用约定.md": {
+    "author": "github-actions[bot]",
+    "last_edited": "2026-10-15T14:47:16Z",
+    "history": [
+      {
+        "hash": "464224b",
+        "author": "github-actions[bot]",
+        "date": "2026-10-15T14:47:16Z",
+        "message": "docs: 同步 atri-core 文档"
+      }
+    ]
+  },
+  "亚托莉喵/QQ消息/频道消息.md": {
+    "author": "github-actions[bot]",
+    "last_edited": "2026-10-15T14:47:16Z",
+    "history": [
+      {
+        "hash": "464224b",
+        "author": "github-actions[bot]",
+        "date": "2026-10-15T14:47:16Z",
+        "message": "docs: 同步 atri-core 文档"
+      }
+    ]
+  },
+  "亚托莉喵/QQ消息组件/Ark模板.md": {
+    "author": "github-actions[bot]",
+    "last_edited": "2026-10-15T14:47:16Z",
+    "history": [
+      {
+        "hash": "464224b",
+        "author": "github-actions[bot]",
+        "date": "2026-10-15T14:47:16Z",
+        "message": "docs: 同步 atri-core 文档"
+      }
+    ]
+  },
+  "亚托莉喵/QQ消息组件/Markdown.md": {
+    "author": "github-actions[bot]",
+    "last_edited": "2026-10-15T14:47:16Z",
+    "history": [
+      {
+        "hash": "464224b",
+        "author": "github-actions[bot]",
+        "date": "2026-10-15T14:47:16Z",
+        "message": "docs: 同步 atri-core 文档"
+      }
+    ]
+  },
+  "亚托莉喵/QQ消息组件/图文卡片.md": {
+    "author": "github-actions[bot]",
+    "last_edited": "2026-10-15T14:47:16Z",
+    "history": [
+      {
+        "hash": "464224b",
+        "author": "github-actions[bot]",
+        "date": "2026-10-15T14:47:16Z",
+        "message": "docs: 同步 atri-core 文档"
+      }
+    ]
+  },
+  "亚托莉喵/QQ消息组件/按钮键盘.md": {
+    "author": "github-actions[bot]",
+    "last_edited": "2026-10-15T14:47:16Z",
+    "history": [
+      {
+        "hash": "464224b",
+        "author": "github-actions[bot]",
+        "date": "2026-10-15T14:47:16Z",
+        "message": "docs: 同步 atri-core 文档"
+      }
+    ]
+  },
+  "亚托莉喵/QQ消息组件/目录.md": {
+    "author": "github-actions[bot]",
+    "last_edited": "2026-10-15T14:47:16Z",
+    "history": [
+      {
+        "hash": "464224b",
+        "author": "github-actions[bot]",
+        "date": "2026-10-15T14:47:16Z",
+        "message": "docs: 同步 atri-core 文档"
+      }
+    ]
+  },
+  "亚托莉喵/QQ消息组件/频道Embed.md": {
+    "author": "github-actions[bot]",
+    "last_edited": "2026-10-15T14:47:16Z",
+    "history": [
+      {
+        "hash": "464224b",
+        "author": "github-actions[bot]",
+        "date": "2026-10-15T14:47:16Z",
+        "message": "docs: 同步 atri-core 文档"
+      }
+    ]
+  },
+  "亚托莉喵/QQ群管理/入群申请.md": {
+    "author": "github-actions[bot]",
+    "last_edited": "2026-10-15T14:47:16Z",
+    "history": [
+      {
+        "hash": "464224b",
+        "author": "github-actions[bot]",
+        "date": "2026-10-15T14:47:16Z",
+        "message": "docs: 同步 atri-core 文档"
+      }
+    ]
+  },
+  "亚托莉喵/QQ群管理/审核策略.md": {
+    "author": "github-actions[bot]",
+    "last_edited": "2026-10-15T14:47:16Z",
+    "history": [
+      {
+        "hash": "464224b",
+        "author": "github-actions[bot]",
+        "date": "2026-10-15T14:47:16Z",
+        "message": "docs: 同步 atri-core 文档"
+      }
+    ]
+  },
+  "亚托莉喵/QQ群管理/成员黑名单.md": {
+    "author": "github-actions[bot]",
+    "last_edited": "2026-10-15T14:47:16Z",
+    "history": [
+      {
+        "hash": "464224b",
+        "author": "github-actions[bot]",
+        "date": "2026-10-15T14:47:16Z",
+        "message": "docs: 同步 atri-core 文档"
+      }
+    ]
+  },
+  "亚托莉喵/QQ群管理/目录.md": {
+    "author": "github-actions[bot]",
+    "last_edited": "2026-10-15T14:47:16Z",
+    "history": [
+      {
+        "hash": "464224b",
+        "author": "github-actions[bot]",
+        "date": "2026-10-15T14:47:16Z",
+        "message": "docs: 同步 atri-core 文档"
+      }
+    ]
+  },
+  "亚托莉喵/QQ群管理/禁言.md": {
+    "author": "github-actions[bot]",
+    "last_edited": "2026-10-15T14:47:16Z",
+    "history": [
+      {
+        "hash": "464224b",
+        "author": "github-actions[bot]",
+        "date": "2026-10-15T14:47:16Z",
+        "message": "docs: 同步 atri-core 文档"
+      }
+    ]
+  },
+  "亚托莉喵/QQ群管理/群成员.md": {
+    "author": "github-actions[bot]",
+    "last_edited": "2026-10-15T14:47:16Z",
+    "history": [
+      {
+        "hash": "464224b",
+        "author": "github-actions[bot]",
+        "date": "2026-10-15T14:47:16Z",
+        "message": "docs: 同步 atri-core 文档"
+      }
+    ]
+  },
+  "亚托莉喵/QQ频道帖子/富文本.md": {
+    "author": "github-actions[bot]",
+    "last_edited": "2026-10-15T14:47:16Z",
+    "history": [
+      {
+        "hash": "464224b",
+        "author": "github-actions[bot]",
+        "date": "2026-10-15T14:47:16Z",
+        "message": "docs: 同步 atri-core 文档"
+      }
+    ]
+  },
+  "亚托莉喵/QQ频道帖子/帖子操作.md": {
+    "author": "github-actions[bot]",
+    "last_edited": "2026-10-15T14:47:16Z",
+    "history": [
+      {
+        "hash": "464224b",
+        "author": "github-actions[bot]",
+        "date": "2026-10-15T14:47:16Z",
+        "message": "docs: 同步 atri-core 文档"
+      }
+    ]
+  },
+  "亚托莉喵/QQ频道帖子/目录.md": {
+    "author": "github-actions[bot]",
+    "last_edited": "2026-10-15T14:47:16Z",
+    "history": [
+      {
+        "hash": "464224b",
+        "author": "github-actions[bot]",
+        "date": "2026-10-15T14:47:16Z",
+        "message": "docs: 同步 atri-core 文档"
       }
     ]
   },
@@ -131,282 +545,6 @@
       }
     ]
   },
-  "亚托莉喵/QQ消息组件/图文卡片.md": {
-    "author": "github-actions[bot]",
-    "last_edited": "2026-10-15T14:47:16Z",
-    "history": [
-      {
-        "hash": "464224b",
-        "author": "github-actions[bot]",
-        "date": "2026-10-15T14:47:16Z",
-        "message": "docs: 同步 atri-core 文档"
-      }
-    ]
-  },
-  "亚托莉喵/QQ消息组件/目录.md": {
-    "author": "github-actions[bot]",
-    "last_edited": "2026-10-15T14:47:16Z",
-    "history": [
-      {
-        "hash": "464224b",
-        "author": "github-actions[bot]",
-        "date": "2026-10-15T14:47:16Z",
-        "message": "docs: 同步 atri-core 文档"
-      }
-    ]
-  },
-  "亚托莉喵/QQ消息组件/频道Embed.md": {
-    "author": "github-actions[bot]",
-    "last_edited": "2026-10-15T14:47:16Z",
-    "history": [
-      {
-        "hash": "464224b",
-        "author": "github-actions[bot]",
-        "date": "2026-10-15T14:47:16Z",
-        "message": "docs: 同步 atri-core 文档"
-      }
-    ]
-  },
-  "亚托莉喵/QQ消息组件/Markdown.md": {
-    "author": "github-actions[bot]",
-    "last_edited": "2026-10-15T14:47:16Z",
-    "history": [
-      {
-        "hash": "464224b",
-        "author": "github-actions[bot]",
-        "date": "2026-10-15T14:47:16Z",
-        "message": "docs: 同步 atri-core 文档"
-      }
-    ]
-  },
-  "亚托莉喵/QQ消息组件/按钮键盘.md": {
-    "author": "github-actions[bot]",
-    "last_edited": "2026-10-15T14:47:16Z",
-    "history": [
-      {
-        "hash": "464224b",
-        "author": "github-actions[bot]",
-        "date": "2026-10-15T14:47:16Z",
-        "message": "docs: 同步 atri-core 文档"
-      }
-    ]
-  },
-  "亚托莉喵/QQ消息组件/Ark模板.md": {
-    "author": "github-actions[bot]",
-    "last_edited": "2026-10-15T14:47:16Z",
-    "history": [
-      {
-        "hash": "464224b",
-        "author": "github-actions[bot]",
-        "date": "2026-10-15T14:47:16Z",
-        "message": "docs: 同步 atri-core 文档"
-      }
-    ]
-  },
-  "亚托莉喵/QQ频道帖子/富文本.md": {
-    "author": "github-actions[bot]",
-    "last_edited": "2026-10-15T14:47:16Z",
-    "history": [
-      {
-        "hash": "464224b",
-        "author": "github-actions[bot]",
-        "date": "2026-10-15T14:47:16Z",
-        "message": "docs: 同步 atri-core 文档"
-      }
-    ]
-  },
-  "亚托莉喵/QQ频道帖子/目录.md": {
-    "author": "github-actions[bot]",
-    "last_edited": "2026-10-15T14:47:16Z",
-    "history": [
-      {
-        "hash": "464224b",
-        "author": "github-actions[bot]",
-        "date": "2026-10-15T14:47:16Z",
-        "message": "docs: 同步 atri-core 文档"
-      }
-    ]
-  },
-  "亚托莉喵/QQ频道帖子/帖子操作.md": {
-    "author": "github-actions[bot]",
-    "last_edited": "2026-10-15T14:47:16Z",
-    "history": [
-      {
-        "hash": "464224b",
-        "author": "github-actions[bot]",
-        "date": "2026-10-15T14:47:16Z",
-        "message": "docs: 同步 atri-core 文档"
-      }
-    ]
-  },
-  "亚托莉喵/QQ交互配置/指令面板.md": {
-    "author": "github-actions[bot]",
-    "last_edited": "2026-10-15T14:47:16Z",
-    "history": [
-      {
-        "hash": "464224b",
-        "author": "github-actions[bot]",
-        "date": "2026-10-15T14:47:16Z",
-        "message": "docs: 同步 atri-core 文档"
-      }
-    ]
-  },
-  "亚托莉喵/QQ交互配置/自定义菜单.md": {
-    "author": "github-actions[bot]",
-    "last_edited": "2026-10-15T14:47:16Z",
-    "history": [
-      {
-        "hash": "464224b",
-        "author": "github-actions[bot]",
-        "date": "2026-10-15T14:47:16Z",
-        "message": "docs: 同步 atri-core 文档"
-      }
-    ]
-  },
-  "亚托莉喵/QQ交互配置/目录.md": {
-    "author": "github-actions[bot]",
-    "last_edited": "2026-10-15T14:47:16Z",
-    "history": [
-      {
-        "hash": "464224b",
-        "author": "github-actions[bot]",
-        "date": "2026-10-15T14:47:16Z",
-        "message": "docs: 同步 atri-core 文档"
-      }
-    ]
-  },
-  "亚托莉喵/QQ交互配置/按钮交互.md": {
-    "author": "github-actions[bot]",
-    "last_edited": "2026-10-15T14:47:16Z",
-    "history": [
-      {
-        "hash": "464224b",
-        "author": "github-actions[bot]",
-        "date": "2026-10-15T14:47:16Z",
-        "message": "docs: 同步 atri-core 文档"
-      }
-    ]
-  },
-  "亚托莉喵/QQ消息/自定义消息请求.md": {
-    "author": "github-actions[bot]",
-    "last_edited": "2026-10-15T14:47:16Z",
-    "history": [
-      {
-        "hash": "464224b",
-        "author": "github-actions[bot]",
-        "date": "2026-10-15T14:47:16Z",
-        "message": "docs: 同步 atri-core 文档"
-      }
-    ]
-  },
-  "亚托莉喵/QQ消息/流式消息.md": {
-    "author": "github-actions[bot]",
-    "last_edited": "2026-10-15T14:47:16Z",
-    "history": [
-      {
-        "hash": "464224b",
-        "author": "github-actions[bot]",
-        "date": "2026-10-15T14:47:16Z",
-        "message": "docs: 同步 atri-core 文档"
-      }
-    ]
-  },
-  "亚托莉喵/QQ消息/频道消息.md": {
-    "author": "github-actions[bot]",
-    "last_edited": "2026-10-15T14:47:16Z",
-    "history": [
-      {
-        "hash": "464224b",
-        "author": "github-actions[bot]",
-        "date": "2026-10-15T14:47:16Z",
-        "message": "docs: 同步 atri-core 文档"
-      }
-    ]
-  },
-  "亚托莉喵/QQ消息/私聊消息.md": {
-    "author": "github-actions[bot]",
-    "last_edited": "2026-10-15T14:47:16Z",
-    "history": [
-      {
-        "hash": "464224b",
-        "author": "github-actions[bot]",
-        "date": "2026-10-15T14:47:16Z",
-        "message": "docs: 同步 atri-core 文档"
-      }
-    ]
-  },
-  "亚托莉喵/QQ消息/备用图片上传.md": {
-    "author": "github-actions[bot]",
-    "last_edited": "2026-10-15T14:47:16Z",
-    "history": [
-      {
-        "hash": "464224b",
-        "author": "github-actions[bot]",
-        "date": "2026-10-15T14:47:16Z",
-        "message": "docs: 同步 atri-core 文档"
-      }
-    ]
-  },
-  "亚托莉喵/QQ消息/目录.md": {
-    "author": "github-actions[bot]",
-    "last_edited": "2026-10-15T14:47:16Z",
-    "history": [
-      {
-        "hash": "464224b",
-        "author": "github-actions[bot]",
-        "date": "2026-10-15T14:47:16Z",
-        "message": "docs: 同步 atri-core 文档"
-      }
-    ]
-  },
-  "亚托莉喵/QQ消息/图片与文件上传.md": {
-    "author": "github-actions[bot]",
-    "last_edited": "2026-10-15T14:47:16Z",
-    "history": [
-      {
-        "hash": "464224b",
-        "author": "github-actions[bot]",
-        "date": "2026-10-15T14:47:16Z",
-        "message": "docs: 同步 atri-core 文档"
-      }
-    ]
-  },
-  "亚托莉喵/QQ消息/群消息.md": {
-    "author": "github-actions[bot]",
-    "last_edited": "2026-10-15T14:47:16Z",
-    "history": [
-      {
-        "hash": "464224b",
-        "author": "github-actions[bot]",
-        "date": "2026-10-15T14:47:16Z",
-        "message": "docs: 同步 atri-core 文档"
-      }
-    ]
-  },
-  "亚托莉喵/QQ消息/调用约定.md": {
-    "author": "github-actions[bot]",
-    "last_edited": "2026-10-15T14:47:16Z",
-    "history": [
-      {
-        "hash": "464224b",
-        "author": "github-actions[bot]",
-        "date": "2026-10-15T14:47:16Z",
-        "message": "docs: 同步 atri-core 文档"
-      }
-    ]
-  },
-  "亚托莉喵/框架/快速开始.md": {
-    "author": "github-actions[bot]",
-    "last_edited": "2026-10-15T14:47:16Z",
-    "history": [
-      {
-        "hash": "464224b",
-        "author": "github-actions[bot]",
-        "date": "2026-10-15T14:47:16Z",
-        "message": "docs: 同步 atri-core 文档"
-      }
-    ]
-  },
   "亚托莉喵/框架/Maven发布.md": {
     "author": "github-actions[bot]",
     "last_edited": "2026-10-15T14:47:16Z",
@@ -419,7 +557,7 @@
       }
     ]
   },
-  "亚托莉喵/框架/用户与消息.md": {
+  "亚托莉喵/框架/Provider.md": {
     "author": "github-actions[bot]",
     "last_edited": "2026-10-15T14:47:16Z",
     "history": [
@@ -428,42 +566,6 @@
         "author": "github-actions[bot]",
         "date": "2026-10-15T14:47:16Z",
         "message": "docs: 同步 atri-core 文档"
-      }
-    ]
-  },
-  "亚托莉喵/框架/构建与开发.md": {
-    "author": "github-actions[bot]",
-    "last_edited": "2026-10-15T14:47:16Z",
-    "history": [
-      {
-        "hash": "464224b",
-        "author": "github-actions[bot]",
-        "date": "2026-10-15T14:47:16Z",
-        "message": "docs: 同步 atri-core 文档"
-      }
-    ]
-  },
-  "亚托莉喵/框架/指令.md": {
-    "author": "github-actions[bot]",
-    "last_edited": "2026-10-15T14:47:16Z",
-    "history": [
-      {
-        "hash": "464224b",
-        "author": "github-actions[bot]",
-        "date": "2026-10-15T14:47:16Z",
-        "message": "docs: 同步 atri-core 文档"
-      },
-      {
-        "hash": "6a3cf75",
-        "author": "github-actions[bot]",
-        "date": "2026-10-05T15:19:49Z",
-        "message": "docs: 同步亚托莉喵文档"
-      },
-      {
-        "hash": "1e8cbf1",
-        "author": "github-actions[bot]",
-        "date": "2026-10-05T15:13:10Z",
-        "message": "docs: 同步亚托莉喵文档"
       }
     ]
   },
@@ -503,7 +605,55 @@
       }
     ]
   },
-  "亚托莉喵/框架/Provider.md": {
+  "亚托莉喵/框架/快速开始.md": {
+    "author": "github-actions[bot]",
+    "last_edited": "2026-10-15T14:47:16Z",
+    "history": [
+      {
+        "hash": "464224b",
+        "author": "github-actions[bot]",
+        "date": "2026-10-15T14:47:16Z",
+        "message": "docs: 同步 atri-core 文档"
+      }
+    ]
+  },
+  "亚托莉喵/框架/指令.md": {
+    "author": "github-actions[bot]",
+    "last_edited": "2026-10-15T14:47:16Z",
+    "history": [
+      {
+        "hash": "464224b",
+        "author": "github-actions[bot]",
+        "date": "2026-10-15T14:47:16Z",
+        "message": "docs: 同步 atri-core 文档"
+      },
+      {
+        "hash": "6a3cf75",
+        "author": "github-actions[bot]",
+        "date": "2026-10-05T15:19:49Z",
+        "message": "docs: 同步亚托莉喵文档"
+      },
+      {
+        "hash": "1e8cbf1",
+        "author": "github-actions[bot]",
+        "date": "2026-10-05T15:13:10Z",
+        "message": "docs: 同步亚托莉喵文档"
+      }
+    ]
+  },
+  "亚托莉喵/框架/构建与开发.md": {
+    "author": "github-actions[bot]",
+    "last_edited": "2026-10-15T14:47:16Z",
+    "history": [
+      {
+        "hash": "464224b",
+        "author": "github-actions[bot]",
+        "date": "2026-10-15T14:47:16Z",
+        "message": "docs: 同步 atri-core 文档"
+      }
+    ]
+  },
+  "亚托莉喵/框架/用户与消息.md": {
     "author": "github-actions[bot]",
     "last_edited": "2026-10-15T14:47:16Z",
     "history": [
@@ -527,183 +677,33 @@
       }
     ]
   },
-  "亚托莉喵/QQ官方机器人/目录.md": {
-    "author": "github-actions[bot]",
-    "last_edited": "2026-10-15T14:47:16Z",
+  "其余内容/页面编辑说明.md": {
+    "author": "YZ_Ljc_",
+    "last_edited": "2026-05-04T15:16:59+08:00",
     "history": [
       {
-        "hash": "464224b",
-        "author": "github-actions[bot]",
-        "date": "2026-10-15T14:47:16Z",
-        "message": "docs: 同步 atri-core 文档"
+        "hash": "1f12a01",
+        "author": "YZ_Ljc_",
+        "date": "2026-05-04T15:16:59+08:00",
+        "message": "feat: Page Edit Information"
+      },
+      {
+        "hash": "87f1785",
+        "author": "YZ_Ljc_",
+        "date": "2026-05-04T15:16:45+08:00",
+        "message": "feat: Custom Block Render and Info Doc"
       }
     ]
   },
-  "亚托莉喵/QQ官方机器人/机器人与群资料.md": {
-    "author": "github-actions[bot]",
-    "last_edited": "2026-10-15T14:47:16Z",
+  "制作人员/YZ_Ljc_.md": {
+    "author": "YZ_Ljc_",
+    "last_edited": "2026-05-04T14:20:05+08:00",
     "history": [
       {
-        "hash": "464224b",
-        "author": "github-actions[bot]",
-        "date": "2026-10-15T14:47:16Z",
-        "message": "docs: 同步 atri-core 文档"
-      }
-    ]
-  },
-  "亚托莉喵/Napcat/合并转发.md": {
-    "author": "github-actions[bot]",
-    "last_edited": "2026-10-15T14:47:16Z",
-    "history": [
-      {
-        "hash": "464224b",
-        "author": "github-actions[bot]",
-        "date": "2026-10-15T14:47:16Z",
-        "message": "docs: 同步 atri-core 文档"
-      }
-    ]
-  },
-  "亚托莉喵/Napcat/用户与好友.md": {
-    "author": "github-actions[bot]",
-    "last_edited": "2026-10-15T14:47:16Z",
-    "history": [
-      {
-        "hash": "464224b",
-        "author": "github-actions[bot]",
-        "date": "2026-10-15T14:47:16Z",
-        "message": "docs: 同步 atri-core 文档"
-      }
-    ]
-  },
-  "亚托莉喵/Napcat/目录.md": {
-    "author": "github-actions[bot]",
-    "last_edited": "2026-10-15T14:47:16Z",
-    "history": [
-      {
-        "hash": "464224b",
-        "author": "github-actions[bot]",
-        "date": "2026-10-15T14:47:16Z",
-        "message": "docs: 同步 atri-core 文档"
-      }
-    ]
-  },
-  "亚托莉喵/Napcat/HTTP调用.md": {
-    "author": "github-actions[bot]",
-    "last_edited": "2026-10-15T14:47:16Z",
-    "history": [
-      {
-        "hash": "464224b",
-        "author": "github-actions[bot]",
-        "date": "2026-10-15T14:47:16Z",
-        "message": "docs: 同步 atri-core 文档"
-      }
-    ]
-  },
-  "亚托莉喵/Napcat/消息.md": {
-    "author": "github-actions[bot]",
-    "last_edited": "2026-10-15T14:47:16Z",
-    "history": [
-      {
-        "hash": "464224b",
-        "author": "github-actions[bot]",
-        "date": "2026-10-15T14:47:16Z",
-        "message": "docs: 同步 atri-core 文档"
-      }
-    ]
-  },
-  "亚托莉喵/Napcat/消息段.md": {
-    "author": "github-actions[bot]",
-    "last_edited": "2026-10-15T14:47:16Z",
-    "history": [
-      {
-        "hash": "464224b",
-        "author": "github-actions[bot]",
-        "date": "2026-10-15T14:47:16Z",
-        "message": "docs: 同步 atri-core 文档"
-      }
-    ]
-  },
-  "亚托莉喵/Napcat/群操作.md": {
-    "author": "github-actions[bot]",
-    "last_edited": "2026-10-15T14:47:16Z",
-    "history": [
-      {
-        "hash": "464224b",
-        "author": "github-actions[bot]",
-        "date": "2026-10-15T14:47:16Z",
-        "message": "docs: 同步 atri-core 文档"
-      }
-    ]
-  },
-  "亚托莉喵/QQ群管理/禁言.md": {
-    "author": "github-actions[bot]",
-    "last_edited": "2026-10-15T14:47:16Z",
-    "history": [
-      {
-        "hash": "464224b",
-        "author": "github-actions[bot]",
-        "date": "2026-10-15T14:47:16Z",
-        "message": "docs: 同步 atri-core 文档"
-      }
-    ]
-  },
-  "亚托莉喵/QQ群管理/目录.md": {
-    "author": "github-actions[bot]",
-    "last_edited": "2026-10-15T14:47:16Z",
-    "history": [
-      {
-        "hash": "464224b",
-        "author": "github-actions[bot]",
-        "date": "2026-10-15T14:47:16Z",
-        "message": "docs: 同步 atri-core 文档"
-      }
-    ]
-  },
-  "亚托莉喵/QQ群管理/入群申请.md": {
-    "author": "github-actions[bot]",
-    "last_edited": "2026-10-15T14:47:16Z",
-    "history": [
-      {
-        "hash": "464224b",
-        "author": "github-actions[bot]",
-        "date": "2026-10-15T14:47:16Z",
-        "message": "docs: 同步 atri-core 文档"
-      }
-    ]
-  },
-  "亚托莉喵/QQ群管理/成员黑名单.md": {
-    "author": "github-actions[bot]",
-    "last_edited": "2026-10-15T14:47:16Z",
-    "history": [
-      {
-        "hash": "464224b",
-        "author": "github-actions[bot]",
-        "date": "2026-10-15T14:47:16Z",
-        "message": "docs: 同步 atri-core 文档"
-      }
-    ]
-  },
-  "亚托莉喵/QQ群管理/群成员.md": {
-    "author": "github-actions[bot]",
-    "last_edited": "2026-10-15T14:47:16Z",
-    "history": [
-      {
-        "hash": "464224b",
-        "author": "github-actions[bot]",
-        "date": "2026-10-15T14:47:16Z",
-        "message": "docs: 同步 atri-core 文档"
-      }
-    ]
-  },
-  "亚托莉喵/QQ群管理/审核策略.md": {
-    "author": "github-actions[bot]",
-    "last_edited": "2026-10-15T14:47:16Z",
-    "history": [
-      {
-        "hash": "464224b",
-        "author": "github-actions[bot]",
-        "date": "2026-10-15T14:47:16Z",
-        "message": "docs: 同步 atri-core 文档"
+        "hash": "ed19cfc",
+        "author": "YZ_Ljc_",
+        "date": "2026-05-04T14:20:05+08:00",
+        "message": "feat: Author Information"
       }
     ]
   }
