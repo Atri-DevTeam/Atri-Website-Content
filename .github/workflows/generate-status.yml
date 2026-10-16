@@ -1,87 +1,118 @@
-name: Generate Passage Status
+name: Generate and Publish Documents
 
 on:
   push:
-    branches:
-      - main
-    paths:
-      - '**/*.md'
+    branches: [main]
+  workflow_dispatch:
 
 concurrency:
-  group: generate-status-${{ github.ref }}
-  cancel-in-progress: true
+  group: publish-documents
+  cancel-in-progress: false
 
 permissions:
   contents: write
 
 jobs:
-  generate-json:
+  publish:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # 必须拉取完整历史记录才能获取所有的 commit
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.x'
 
-      - name: Generate passage_status.json
+      - name: Generate catalog and publish documents
+        env:
+          DOCS_PUBLISH_URL: ${{ secrets.DOCS_PUBLISH_URL }}
+          DOCS_PUBLISH_TOKEN: ${{ secrets.DOCS_PUBLISH_TOKEN }}
         run: |
-          python -c '
-          import os, json, subprocess
+          python - <<'PY'
+          import base64, json, os, subprocess
+          from pathlib import Path
+          from urllib.parse import urlsplit
+          from urllib.request import Request, build_opener, HTTPRedirectHandler
+          from urllib.error import HTTPError, URLError
 
-          result = {}
-          # 遍历当前目录
-          for root, dirs, files in os.walk("."):
-              # 忽略掉 .git 和 .github 目录
-              if ".git" in root or ".github" in root:
+          url = os.environ.get("DOCS_PUBLISH_URL", "").strip()
+          token = os.environ.get("DOCS_PUBLISH_TOKEN", "")
+          address = urlsplit(url)
+          if address.scheme != "https" or not address.hostname or address.username or address.password:
+              raise SystemExit("DOCS_PUBLISH_URL 必须是 HTTPS 发布接口地址")
+          if len(token) < 32 or any(c.isspace() for c in token):
+              raise SystemExit("DOCS_PUBLISH_TOKEN 至少 32 个字符，不能包含空白")
+
+          def git(*args):
+              return subprocess.check_output(["git", *args]).decode("utf-8")
+
+          catalog, documents, assets = {}, {}, {}
+          image_types = {".png", ".jpg", ".jpeg", ".gif", ".webp", ".avif", ".svg"}
+          max_bytes = 32 * 1024 * 1024
+          source_bytes = 0
+          for name in git("ls-files", "-z").split("\0"):
+              if not name or any(p.startswith(".") or p in {"node_modules", "dist"} for p in name.split("/")):
                   continue
-          
-              for file in files:
-                  if file.endswith(".md"):
-                      filepath = os.path.join(root, file)
-                      # 修改点：不再只取 -1 条，而是取这个文件的所有历史记录
-                      # 格式化输出: %h(短哈希)|%aN(作者)|%aI(ISO时间)|%s(提交信息)
-                      cmd = ["git", "log", "--format=%h|%aN|%aI|%s", filepath]
-                      try:
-                          output = subprocess.check_output(cmd).decode("utf-8").strip()
-                          if output:
-                              lines = output.split("\n")
-                              history_list = []
-          
-                              for line in lines:
-                                  # 按 | 分割，最多分割3次（防止提交信息中含有 | 字符导致解析报错）
-                                  parts = line.split("|", 3)
-                                  if len(parts) == 4:
-                                      history_list.append({
-                                          "hash": parts[0],
-                                          "author": parts[1],
-                                          "date": parts[2],
-                                          "message": parts[3]
-                                      })
-          
-                              if history_list:
-                                  # 取第一条作为最后编辑状态（因为 git log 默认按时间倒序排，第一条就是最新的）
-                                  latest = history_list[0]
-                                  clean_path = filepath.lstrip("./")
-          
-                                  result[clean_path] = {
-                                      "author": latest["author"],
-                                      "last_edited": latest["date"],
-                                      "history": history_list  # 把完整历史记录存进数组
-                                  }
-                      except Exception as e:
-                          print(f"Error processing {filepath}: {e}")
+              path = Path(name)
+              suffix = path.suffix.lower()
+              if suffix != ".md" and suffix not in image_types:
+                  continue
+              if any(p.is_symlink() for p in [path, *path.parents]):
+                  raise SystemExit(f"不支持符号链接：{name}")
+              source_bytes += path.stat().st_size
+              if source_bytes > max_bytes or len(documents) + len(assets) >= 10000:
+                  raise SystemExit("文档和图片超过 32 MiB 或 10000 个文件限制")
+              if suffix in image_types:
+                  assets[name] = base64.b64encode(path.read_bytes()).decode("ascii")
+                  continue
+              documents[name] = path.read_text(encoding="utf-8")
+              history = []
+              for line in git("log", "--format=%h%x00%aN%x00%aI%x00%s", "--", name).splitlines():
+                  parts = line.split("\0", 3)
+                  if len(parts) == 4:
+                      history.append(dict(zip(("hash", "author", "date", "message"), parts)))
+              if not history:
+                  raise SystemExit(f"文档没有可用的 Git 历史：{name}")
+              catalog[name] = {
+                  "author": history[0]["author"],
+                  "last_edited": history[0]["date"],
+                  "history": history,
+              }
 
-          # 写入 JSON 文件
-          with open("passage_status.json", "w", encoding="utf-8") as f:
-              json.dump(result, f, ensure_ascii=False, indent=2)
-          '
+          if not documents:
+              raise SystemExit("没有找到 Markdown 文档")
+          Path("passage_status.json").write_text(
+              json.dumps(catalog, ensure_ascii=False, indent=2), encoding="utf-8")
+          revision = git("rev-parse", "HEAD").strip()
+          body = json.dumps({"revision": revision, "catalog": catalog,
+                             "files": documents, "assets": assets}, ensure_ascii=False).encode("utf-8")
+          if len(body) > max_bytes:
+              raise SystemExit("发布包超过 32 MiB，请缩减图片或文档体积")
 
-      - name: Commit and Push changes
+          class NoRedirect(HTTPRedirectHandler):
+              def redirect_request(self, req, fp, code, msg, headers, newurl):
+                  return None
+
+          request = Request(url, data=body, method="POST", headers={
+              "Authorization": "Bearer " + token, "Content-Type": "application/json"})
+          try:
+              with build_opener(NoRedirect()).open(request, timeout=120) as response:
+                  result = json.load(response)
+          except HTTPError as error:
+              raise SystemExit(f"发布失败，HTTP {error.code}，请检查后端接口及配置")
+          except (URLError, TimeoutError):
+              raise SystemExit("无法连接发布接口，或请求超时")
+          if result.get("status") != 200:
+              raise SystemExit("后端未返回发布成功状态")
+          print(f"发布成功：{len(documents)} 篇文档，{len(assets)} 张图片，版本 {revision}")
+          PY
+
+      - name: Commit passage_status.json
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: auto-update passage_status.json with history [skip ci]"
