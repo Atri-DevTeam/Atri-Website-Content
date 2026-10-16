@@ -67,7 +67,9 @@ HTTP 2xx 的 JSON 不会自动检查 `status` / `retcode`，调用方必须检�
 
 GET_USER_INFO 与 GET_STRANGER_INFO 是同一路径的两个枚举名，getRequestLink() 返回路径字符串
 
+::: note 请求枚举与参数模型
 列表中只有请求枚举、没有高层封装的能力，不代表 core 已提供完整参数模型。特别是批量移除成员和点击内联按钮，当前 core 未提供类型化调用或参数校验，需按实际 Napcat 服务版本组织参数
+:::
 
 群操作与资料参数见 [群操作](%E7%BE%A4%E6%93%8D%E4%BD%9C.md)、[用户与好友](%E7%94%A8%E6%88%B7%E4%B8%8E%E5%A5%BD%E5%8F%8B.md)；消息和转发优先使用 [聊天类](%E6%B6%88%E6%81%AF.md)
 

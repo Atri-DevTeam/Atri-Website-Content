@@ -4,7 +4,7 @@
 
 `AtriProvider` 是运行服务的抽象基类，提供框架服务访问和业务扩展方法
 
-包名：`top.yzljc.atricore` · [源码](https://github.com/Atri-DevTeam/AtriBot/blob/b65f2d2b0804ae6e49abf3695be5495f869d4dfd/atri-core/src/main/java/top/yzljc/atricore/AtriProvider.java)
+包名：`top.yzljc.atricore` · [源码](https://github.com/Atri-DevTeam/AtriBot/blob/d81a99bd8c0f3ca1d280d7c34c0c4703be08638f/atri-core/src/main/java/top/yzljc/atricore/AtriProvider.java)
 
 ## 生命周期
 
@@ -43,7 +43,9 @@ void start()
 
 重复调用不重复启动，已关闭或同步启动步骤失败时抛出 `IllegalStateException`，失败时释放框架资源
 
+::: note 启动与连接状态
 WebSocket 连接握手异步执行，方法返回不表示连接已建立
+:::
 
 ### close
 
@@ -104,7 +106,9 @@ public final class ServiceProvider extends AtriProvider {
 }
 ```
 
+::: important 扩展对象的生命周期
 扩展对象应在 Provider 生命周期内复用，`getSettings()`、`getAccessService()`、`getLogRecorder()`、`getBotCommand()` 不得返回 null
+:::
 
 ### AccessService
 
@@ -151,7 +155,7 @@ public final class ServiceProvider extends AtriProvider {
 
 请求回调中的 `traceId` 来自 `recordSend()`，与 QQ 响应的 `trace_id` 无关
 
-Napcat 调用计数在请求前触发，指令分发计数也不表示业务执行成功，具体参数见 [LogRecorder](https://github.com/Atri-DevTeam/AtriBot/blob/b65f2d2b0804ae6e49abf3695be5495f869d4dfd/atri-core/src/main/java/top/yzljc/atricore/core/LogRecorder.java)
+Napcat 调用计数在请求前触发，指令分发计数也不表示业务执行成功，具体参数见 [LogRecorder](https://github.com/Atri-DevTeam/AtriBot/blob/d81a99bd8c0f3ca1d280d7c34c0c4703be08638f/atri-core/src/main/java/top/yzljc/atricore/core/LogRecorder.java)
 
 ### BotCommand
 
