@@ -4,7 +4,7 @@
 
 `AtriProvider` 是运行服务的抽象基类，提供框架服务访问和业务扩展方法
 
-包名：`top.yzljc.atricore` · [源码](https://github.com/Atri-DevTeam/AtriBot/blob/2a1ea98a2ed52802047b4e2ff266cbeed1be767b/atri-core/src/main/java/top/yzljc/atricore/AtriProvider.java)
+包名：`top.yzljc.atricore` · [源码](https://github.com/Atri-DevTeam/AtriBot/blob/d4f288f55256146670fbe62832d8be0ef17db71a/atri-core/src/main/java/top/yzljc/atricore/AtriProvider.java)
 
 ## 生命周期
 
@@ -165,7 +165,7 @@ public final class ServiceProvider extends AtriProvider {
 
 自建线程或其他执行器不会自动传递计时上下文，需要通过 `MessageTrace.capture()` 包装任务；取消或拒绝尚未执行的包装任务时调用 `Task.cancel()` 释放关联。独立后台工作可通过 `MessageTrace.detached()` 提交，使其不计入消息链路
 
-Napcat 调用计数在请求前触发，指令分发计数也不表示业务执行成功，具体参数见 [LogRecorder](https://github.com/Atri-DevTeam/AtriBot/blob/2a1ea98a2ed52802047b4e2ff266cbeed1be767b/atri-core/src/main/java/top/yzljc/atricore/core/LogRecorder.java)
+Napcat 调用计数在请求前触发，指令分发计数也不表示业务执行成功，具体参数见 [LogRecorder](https://github.com/Atri-DevTeam/AtriBot/blob/d4f288f55256146670fbe62832d8be0ef17db71a/atri-core/src/main/java/top/yzljc/atricore/core/LogRecorder.java)
 
 ### BotCommand
 
